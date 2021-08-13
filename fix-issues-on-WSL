@@ -1,0 +1,13 @@
+vagrant plugin install vagrant-vbguest
+export PATH="$PATH:/mnt/c/Windows/System32"
+export PATH="$PATH:/mnt/c/Program Files/Oracle/VirtualBox"
+export VAGRANT_WSL_ENABLE_WINDOWS_ACCESS="1"
+
+#PAth of project
+export VAGRANT_WSL_WINDOWS_ACCESS_USER_HOME_PATH="/mnt/c/lab-vagrant/ansible"
+
+
+
+***Link
+https://superuser.com/questions/1611324/why-is-vagrant-in-ubuntu-docker-container-on-windows-looking-for-powershell
+https://bodhileafy.wordpress.com/2018/04/03/vagrant-unknown-configuration-section-vbguest/
