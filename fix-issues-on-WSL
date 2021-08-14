@@ -1,14 +1,22 @@
+1, Running vagrant on WSL
 #vagrant plugin install vagrant-vbguest
 export PATH="$PATH:/mnt/c/Windows/System32"
 export PATH="$PATH:/mnt/c/Program Files/Oracle/VirtualBox"
 export PATH="$PATH:/mnt/c/Windows/System32/WindowsPowerShell/v1.0"
-
 export VAGRANT_WSL_ENABLE_WINDOWS_ACCESS="1"
 #PAth of project
-export VAGRANT_WSL_WINDOWS_ACCESS_USER_HOME_PATH="/mnt/c/lab-vagrant/NC/ansible"
-
-
+export VAGRANT_WSL_WINDOWS_ACCESS_USER_HOME_PATH=`pwd`
 
 ***Link
 https://superuser.com/questions/1611324/why-is-vagrant-in-ubuntu-docker-container-on-windows-looking-for-powershell
 https://bodhileafy.wordpress.com/2018/04/03/vagrant-unknown-configuration-section-vbguest/
+
+
+2,VBoxManage.exe: error: Details: code E_FAIL (0x80004005)
+
+
+Go to C:\Program Files\Oracle\VirtualBox\drivers\vboxdrv directory, right click on VBoxDrv.inf and select Install.
+Go to console and enter 'sc start vboxdrv'.
+
+***Link
+https://github.com/hashicorp/vagrant/issues/9318
